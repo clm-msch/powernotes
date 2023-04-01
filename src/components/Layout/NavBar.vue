@@ -6,10 +6,10 @@
       </RouterLink>
       <div class="flex md:order-2 gap-2">
         <button type="button" class="text-white bg-primary hover:bg-primary_dark font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0">
-          S'inscrire
+          Inscription
         </button>
         <button type="button" class="text-primary bg-secondary border-2 border-primary hover:border-primary_dark hover:text-primary_dark font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0">
-          Se connecter
+          Connexion
         </button>
         <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-black rounded-lg md:hidden hover:text-primary" aria-controls="navbar-sticky" aria-expanded="false" @click="showMenu = !showMenu">
           <span class="sr-only">Open main menu</span>
@@ -19,7 +19,8 @@
         </button>
       </div>
       <div :class="{'block': showMenu, 'hidden': !showMenu}" class="items-center justify-between w-full md:hidden" id="navbar-sticky">
-        <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg">
+        
+        <ul class="flex flex-col p-4 mt-4 font-medium rounded-lg" >
           <li>
             <RouterLink to="/" class="block py-2 pl-3 pr-4 text-black" active-class="text-primary" @click="showMenu = false">Notes</RouterLink>
           </li>

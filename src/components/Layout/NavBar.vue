@@ -1,8 +1,9 @@
 <template>
   <nav class="bg-secondary fixed w-full z-20 top-0 left-0">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <RouterLink to="/" class="flex">
-        <img src="/src/assets/logo.svg" class="h-12 mr-3" alt="Powernotes Logo" />
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between
+    mx-auto p-2">
+      <RouterLink to="/" class="flex my-4">
+        <img src="/src/assets/logo.svg" class="h-8 mr-3" alt="Powernotes Logo" />
       </RouterLink>
       <div class="flex md:order-2 gap-2">
         <button type="button" class="text-white bg-primary hover:bg-primary_dark font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0">

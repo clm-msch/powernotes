@@ -1,7 +1,9 @@
 <template>
   <NavBar />
+  <div class="mt-24 px-10">
+    <RouterView />
+  </div>
   
-  <RouterView />
 </template>
 
 <script setup>

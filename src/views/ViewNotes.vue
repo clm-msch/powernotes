@@ -30,6 +30,7 @@
       v-for="note in notes"
       :key="note.id"
       :note="note"
+			@deleteClicked="deleteNote"
     />
 	</div>
 </template>
@@ -49,18 +50,6 @@ const newNoteContent = ref('')
 const newNoteRef = ref(null)
 
 const notes = ref([
-	// {
-	// 	id: "id1",
-  //   title: "Loraine Ipsoum",
-	// 	content:
-	// 		"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur cumque, soluta itaque corporis voluptatem, temporibus reiciendis, numquam molestiae nam ducimus nulla nihil? Quasi minima provident sit? Aliquam consequuntur reprehenderit officia!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur cumque, soluta itaque corporis voluptatem, temporibus reiciendis, numquam molestiae nam ducimus nulla nihil?"
-	// },
-  // {
-	// 	id: "id2",
-  //   title: "Note 2",
-	// 	content:
-	// 		"Ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cumque, soluta itaque corporis voluptatem, quasi minima provident sit? Aliquam consequuntur reprehenderit officia!"
-	// }
 ])
 
 const addNote = () => {
@@ -76,5 +65,14 @@ const addNote = () => {
   newNoteContent.value = ''
 
   newNoteRef.value.focus()
+}
+
+
+/*
+	delete note
+*/
+
+const deleteNote = (idToDelete) => {
+	notes.value = notes.value.filter(note => note.id !== idToDelete)
 }
 </script>

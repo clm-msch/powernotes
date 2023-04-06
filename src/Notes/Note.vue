@@ -7,19 +7,18 @@
     <p class="text-gray-700 text-base">
       {{ note.content }}
       <div class="flex justify-end text-gray-500">
-        <small>{{ characterLength }}</small>
+        <small>{{ characterLength }} </small>
       </div>
     </p>
   </div>
   <div class="px-6 pt-4 pb-2 flex justify-end">
     <button
-    @click.prevent="handleModifyClicked"
       class="bg-primary hover:bg-primary_dark text-white font-bold py-2 px-4 rounded-lg mr-2"
     >
       Modifier
     </button>
     <button
-    @click.prevent="handleDeleteClicked"
+    @click.prevent="storeNotes.deleteNote(note.id)"
       class="border-2 border-primary text-primary hover:text-primary_dark hover:border-primary_dark font-bold py-1.5 px-4 rounded-lg"
     >
       Suprimer
@@ -34,6 +33,7 @@
 import 
 */
 import { computed } from 'vue'
+import { useStoreNotes } from '/stores/storeNotes.js'
 
 
 /*
@@ -54,6 +54,12 @@ const props = defineProps({
   const emit = defineEmits(['deleteClicked'])
 
 /*
+store
+*/
+
+const storeNotes = useStoreNotes()
+
+/*
   character length
 */
 const characterLength = computed(() => {
@@ -71,7 +77,4 @@ const handleDeleteClicked = () => {
   emit('deleteClicked' , props.note.id)
 }
 
-/*
-  handle modify clicked
-*/
 </script>

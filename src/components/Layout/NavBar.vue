@@ -6,23 +6,23 @@
 			<RouterLink to="/" class="flex my-4">
 				<img
 					src="/src/assets/logo.svg"
-					class="h-8 mr-3"
+					class="h-8 mr-3 w-fit"
 					alt="Powernotes Logo"
 				/>
 			</RouterLink>
 			<div class="flex md:order-2 gap-2">
 				<button
 					type="button"
-					class="text-white bg-primary hover:bg-primary_dark font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+					class="text-white bg-primary font-bold hover:bg-primary_dark  rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
 				>
-					Inscription
+					Connexion
 				</button>
-				<button
+				<!-- <button
 					type="button"
 					class="text-primary bg-secondary border-2 border-primary hover:border-primary_dark hover:text-primary_dark font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
 				>
 					Connexion
-				</button>
+				</button> -->
 				<button
 					data-collapse-toggle="navbar-sticky"
 					type="button"
